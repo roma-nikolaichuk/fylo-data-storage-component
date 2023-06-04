@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
+// Font Family
+$theme-text-font: "Raleway", sans-serif;
+
+// Primary Colors
+$theme-gradient: linear-gradient(
+  to right,
+  hsl(6, 100%, 80%),
+  hsl(335, 100%, 65%)
+);
+
+// Neutral Colors
+$theme-pale-blue-color: hsl(243, 100%, 93%);
+$theme-grayish-blue-color: hsl(229, 7%, 55%);
+$theme-dark-blue-color: hsl(228, 56%, 26%);
+$theme-very-dark-blue-color: hsl(229, 57%, 11%);
+$theme-very-dark-blue-opacity-color: hsl(229, 57%, 11%, 0.5);
+
+$media: (
+  sm: 576px,
+  // Small devices
+  md: 768px,
+  // Medium devices
+  lg: 992px,
+  // Large devices
+  xl: 1200px,
+  // X-Large devices
+  2xl: 1400px,
+  // XX-Large devices
+  3xl: 1900px,
+  // XXX-Large devices
+  rwd: 364px,
+  // Custom device
+);

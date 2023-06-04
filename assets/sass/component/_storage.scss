@@ -1,0 +1,177 @@
+.storage {
+  width: 20.5rem;
+  @include flex();
+  gap: 1rem;
+
+  &--shadowed {
+    box-shadow: 0 0 3rem 1rem $theme-very-dark-blue-opacity-color;
+  }
+
+  @include media-breakpoint-up(xl) {
+    width: 57.5rem;
+    margin-bottom: 1.25rem;
+    @include flex(row, space-between, flex-end);
+  }
+
+  &__header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: $theme-dark-blue-color;
+    border-radius: 0.5rem 6rem 0.5rem 0.5rem;
+    padding: 2.5rem;
+
+    @include media-breakpoint-up(xl) {
+      width: 21.875rem;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__icon {
+    @include size(3rem);
+    background-color: $theme-very-dark-blue-color;
+    border-radius: 0.5rem;
+
+    @include center-grid;
+
+    &-image {
+      display: block;
+      fill: #000;
+    }
+  }
+
+  &__progress-wrapper {
+    width: 100%;
+    padding: 2rem 2.25rem 3.25rem;
+    border-radius: 0.5rem;
+    background-color: $theme-dark-blue-color;
+    margin-bottom: 2.2rem;
+
+    @include media-breakpoint-up(xl) {
+      width: calc(100% - 21.875rem - 2rem);
+      margin-bottom: 0;
+      padding: 2.5rem;
+    }
+  }
+
+  &__progress-container {
+    @include media-breakpoint-up(xl) {
+      position: relative;
+    }
+  }
+
+  &__usage {
+    margin-bottom: 1.25rem;
+    text-align: center;
+
+    @include media-breakpoint-up(xl) {
+      text-align: left;
+    }
+
+    &-value {
+      font-weight: 700;
+    }
+  }
+
+  &__progress-bar {
+    position: relative;
+    width: 100%;
+    height: 0.75rem;
+    appearance: none;
+    background-color: $theme-very-dark-blue-opacity-color;
+    border-radius: 3.125rem;
+    outline: 0.25rem solid $theme-very-dark-blue-opacity-color;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+
+    &::-webkit-slider-thumb {
+      appearance: none;
+      @include size(0.75rem);
+      background-color: #fff;
+      border-radius: 50%;
+      position: relative;
+      z-index: 2;
+    }
+
+    &::-moz-range-thumb {
+      @include size(0.75rem);
+      background-color: #fff;
+      border-radius: 50%;
+      position: relative;
+      z-index: 2;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: calc((100% / 1000) * 815);
+      background: $theme-gradient;
+      border-radius: 3.125rem;
+      z-index: -1;
+    }
+  }
+
+  &__limit {
+    font-weight: 700;
+  }
+
+  &__limits {
+    @include flex(row, space-between);
+    font-size: 0.75rem;
+  }
+
+  &__message {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    margin-top: 1rem;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    background-color: #fff;
+
+    @include media-breakpoint-up(xl) {
+      position: absolute;
+      top: 0;
+      left: unset;
+      right: 0;
+      margin-top: unset;
+      transform: translate(0%, -125%);
+      border-bottom-right-radius: 0;
+
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: -0.9375rem;
+        right: -1rem;
+        border-width: 1rem;
+        border-style: solid;
+        border-color: #fff transparent transparent transparent;
+        transform: rotate(-135deg);
+      }
+    }
+
+    &-text {
+      @include flex(row);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.0625rem;
+      color: $theme-grayish-blue-color;
+    }
+
+    &-value {
+      margin-right: 0.375rem;
+      font-size: 2.5rem;
+      color: $theme-very-dark-blue-color;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+body {
+  width: 100%;
+  min-height: 100vh;
+  @include center-grid;
+  font-family: $theme-text-font;
+  @include font-style(0.875rem, 400);
+  color: $theme-pale-blue-color;
+  background: url("../../../assets/images/bg-mobile.png") no-repeat center/cover;
+
+  @include media-breakpoint-up(xl) {
+    background: url("../../../assets/images/bg-desktop.png") no-repeat
+      bottom/contain;
+    background-color: $theme-very-dark-blue-color;
+  }
+}

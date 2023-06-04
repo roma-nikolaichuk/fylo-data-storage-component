@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Roman Nikolaichuk">
+    <meta
+      name="description"
+      content="Fylo data storage component Solution for FrontendMentor.io. Users should be able to view the optimal layout for the site depending on their device's screen size."
+    >
+    <meta
+      name="keywords"
+      content="Frontend Mentor, Frontend, Mentor, Fylo data storage component, Fylo data storage component Solution, Data storage component, Roman Nikolaichuk, FrontendMentor.io, Roman Nikolaichuk Frontend"
+    >
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    >
+
+    <title>Frontend Mentor | Fylo data storage component</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    >
+  </head>
+  <body>
+    <main class="container">
+      <h1 class="sr-only">Fylo data storage component</h1>
+
+      <section class="storage">
+        <div class="storage__header storage--shadowed animate__animated animate__backInLeft">
+          <div class="storage__logo animate__animated animate__delay-1s animate__fadeIn">
+            <img
+              class="storage__logo-image"
+              src="./assets/images/logo.svg"
+              alt="Fylo Storage Logo"
+            >
+          </div>
+
+          <div class="storage__icons">
+            <div class="storage__icon animate__animated animate__delay-1s animate__zoomIn">
+              <img
+                class="storage__icon-image"
+                src="./assets/images/icon-document.svg"
+                alt="Document Icon"
+              >
+            </div>
+            <div class="storage__icon animate__animated animate__delay-1s animate__zoomIn">
+              <img
+                class="storage__icon-image"
+                src="./assets/images/icon-folder.svg"
+                alt="Folder Icon"
+              >
+            </div>
+            <div class="storage__icon animate__animated animate__delay-1s animate__zoomIn">
+              <img
+                class="storage__icon-image"
+                src="./assets/images/icon-upload.svg"
+                alt="Upload Icon"
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="storage__progress-wrapper storage--shadowed animate__animated animate__backInUp">
+          <div class="storage__progress-container animate__animated animate__delay-1s animate__zoomIn">
+            <p class="storage__usage">
+              You’ve used <span class="storage__usage-value">815 GB</span> of your storage
+            </p>
+
+            <input
+              type="range"
+              min="0"
+              max="1000"
+              value="815"
+              class="storage__progress-bar"
+              disabled
+            >
+
+            <div class="storage__limits">
+              <span class="storage__limit">0 GB</span>
+              <span class="storage__limit">1000 GB</span>
+            </div>
+
+            <div class="storage__message animate__animated animate__delay-2s animate__fadeIn">
+              <p class="storage__message-text">
+                <span class="storage__message-value">185</span> GB LEFT
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <button
+        class="footer__button js-toggle-tip animate__animated animate__fadeInBottomRight"
+        type="button"
+        aria-label="Attribution"
+        aria-haspopup="true"
+        aria-expanded="false"
+        aria-controls="attribution"
+      >
+        <img
+          class="footer__image"
+          src="https://avatars.githubusercontent.com/u/107611767?s=400&u=af2347175f31d710bee7ec634f994ae53d460731&v=4"
+          alt="GitHub Avatar"
+          width="50"
+          height="50"
+        >
+      </button>
+
+      <div
+        id="attribution"
+        role="tooltip"
+        class="footer__attribution footer__dialog js-tooltip"
+      >
+        <p class="footer__text">
+          Challenge by
+          <a
+            href="https://www.frontendmentor.io/challenges/fylo-data-storage-component-1dZPRbV5n"
+            target="_blank"
+            rel="noreferrer noopener"
+            title="Open in new tab"
+            class="footer__link"
+            >Frontend Mentor</a
+          >. Coded by
+          <a
+            href="https://github.com/roma-nikolaichuk/fylo-data-storage-component"
+            target="_blank"
+            rel="noreferrer noopener"
+            title="Open in new tab"
+            class="footer__link"
+            >Roman Nikolaichuk</a
+          >.
+        </p>
+      </div>
+    </footer>
+
+    <script src="./assets/js/footer.js" defer></script>
+  </body>
+</html>
